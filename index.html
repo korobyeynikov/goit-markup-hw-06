@@ -434,8 +434,30 @@
         <button class="btn-modal" type="button" data-modal-close>
           <svg class="icon-card" width="18px" height="18px">
             <use href="./images/icon.svg#icon-close"></use>
+          </svg>
         </button>
-        </svg>
+        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form">
+          <ul class="list">
+            <li class="modal-list">
+              <label for="name" class="label-form">Ім'я</label>
+              <input class="modal-input" type="text" name="name" id="name" placeholder=" ">
+            </li>
+            <li class="modal-list">
+              <label for="tel" class="label-form">Телефон</label>
+              <input class="modal-input" type="tel" name="tel" id="tel" placeholder=" ">
+            </li>
+            <li class="modal-list">
+              <label for="modal-mail" class="label-form">Пошта</label>
+              <input class="modal-input" type="email" name="modal-mail" id="modal-mail" placeholder=" ">
+            </li>
+            <li class="modal-list">
+              <label for="modal-text" class="label-form">Коментар</label>
+              <textarea class="modal-textarea" name="textarea" id="modal-text" cols="30" rows="10" placeholder="Введіть текст"></textarea>
+            </li>
+          </ul>
+          
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

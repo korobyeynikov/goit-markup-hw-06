@@ -18,6 +18,9 @@
   --backdrop-overlay: rgba(0, 0, 0, 0.2);
   /* модальне вікно */
   --modal-bgn: #ffffff;
+  --bgn-border: 1px solid rgba(33, 33, 33, 0.2);
+  --label-color: #757575;
+  --plh-color: rgba(117, 117, 117, 0.5);
   /*анимація ховер*/
   --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -595,8 +598,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 200px;
+  height: 50px;
 
-  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -608,6 +611,12 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border: transparent;
   border-radius: 4px;
+
+  transition: background-color var(--transition);
+}
+.form-button:hover,
+.form-button:focus {
+  background-color: var(--bgn-btnaction);
 }
 .form-button .icon-card {
   margin-left: 10px;
@@ -706,6 +715,7 @@ body {
 .modal {
   width: 528px;
   min-height: 581px;
+  padding: 40px;
 
   background-color: var(--modal-bgn);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -740,4 +750,58 @@ body {
 .btn-modal:hover,
 .btn-modal:focus {
   color: var(--accent-color);
+}
+
+.modal-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--brand-color);
+}
+.modal-list {
+  margin-bottom: 10px;
+}
+.label-form {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.01em;
+
+  color: var(--label-color);
+}
+.modal-input {
+  margin: 0;
+  padding: 0;
+  padding-left: 12px;
+  padding-right: 12px;
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+
+  border: var(--bgn-border);
+  border-radius: 4px;
+}
+.modal-textarea {
+  margin: 0;
+  padding: 12px 16px;
+  width: 448px;
+  height: 120px;
+
+  border: var(--bgn-border);
+  border-radius: 4px;
+}
+.modal-textarea::placeholder {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+
+  color: var(--plh-color);
 }
