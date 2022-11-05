@@ -843,8 +843,10 @@ body {
   color: var(--plh-color);
 }
 .label-checkbox {
+  position: relative;
   display: block;
   margin-bottom: 30px;
+  padding-left: 22px;
   font-size: 14px;
   line-height: 1.71;
   text-align: center;
@@ -852,6 +854,26 @@ body {
   letter-spacing: 0.03em;
 
   color: var(--label-color);
+}
+.input-checkbox {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -appearance: none;
+  position: absolute;
+}
+.icon-checkbox {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -22px;
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/Vector.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.input-checkbox:checked + .icon-checkbox {
+  background-image: url(../images/icon-check.svg);
 }
 .checkbox-link {
   color: var(--accent-color);
