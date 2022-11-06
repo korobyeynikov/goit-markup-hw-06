@@ -575,9 +575,12 @@ body {
 }
 .mailing {
   display: flex;
+  align-items: center;
   margin: 0;
 }
 .form-input {
+  display: flex;
+  align-items: center;
   width: 358px;
   height: 50px;
   margin: 0;
@@ -871,6 +874,7 @@ body {
   background-image: url(../images/Vector.svg);
   background-size: contain;
   background-repeat: no-repeat;
+  transition: background-image var(--transition);
 }
 .input-checkbox:checked + .icon-checkbox {
   background-image: url(../images/icon-check.svg);
